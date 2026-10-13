@@ -1,3 +1,5 @@
+# Cálculo de histograma, expansão e equalização (CDF / LUT)
+
 import numpy as np
 from core.utils import clip_to_uint8
 

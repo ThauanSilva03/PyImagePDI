@@ -1,3 +1,5 @@
+# Transformações pontuais (negativo, limiar, gama, log, contraste)
+
 import numpy as np
 from core.utils import clip_to_uint8
 

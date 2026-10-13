@@ -1,3 +1,5 @@
+# Dissolve cruzado uniforme e não uniforme (degradê)
+
 import numpy as np
 from core.utils import clip_to_uint8
 

@@ -1,3 +1,5 @@
+# Realce de contraste adaptativo local (média e desvio padrão)
+
 import numpy as np
 from core.utils import clip_to_uint8, pad_image
 

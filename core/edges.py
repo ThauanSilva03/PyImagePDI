@@ -1,3 +1,5 @@
+# Detectores de borda: Sobel, Roberts, Kirsch (8 direções) e Laplaciano
+
 import numpy as np
 from core.utils import clip_to_uint8, pad_image
 

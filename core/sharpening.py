@@ -1,24 +1,20 @@
+# Aguçamento Laplaciano e Filtragem High-Boost
+
 import numpy as np
 from core.utils import clip_to_uint8, pad_image
 
 def laplacian_filter_raw(img: np.ndarray, include_diagonals: bool = False) -> np.ndarray:
-    """
-    Calcula a convolução direta com a máscara Laplaciana (centro negativo).
-    Retorna a matriz em float64 com valores positivos e negativos reais.
-    """
     h, w = img.shape
     padded = pad_image(img, 1, 1, mode="reflect")
     lap_raw = np.zeros((h, w), dtype=np.float64)
 
     if not include_diagonals:
-        # Vizinhança-4 (centro -4)
         kernel = np.array([
             [ 0.0,  1.0,  0.0],
             [ 1.0, -4.0,  1.0],
             [ 0.0,  1.0,  0.0]
         ], dtype=np.float64)
     else:
-        # Vizinhança-8 (centro -8)
         kernel = np.array([
             [ 1.0,  1.0,  1.0],
             [ 1.0, -8.0,  1.0],

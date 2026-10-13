@@ -1,3 +1,5 @@
+# Filtros espaciais de suavização (Média e Mediana)
+
 import numpy as np
 from core.utils import clip_to_uint8, pad_image
 
